@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "728840360531",
+    "project_id": "message-app-9811e",
+    "storage_bucket": "message-app-9811e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:728840360531:android:3486077494b373517b2ca6",
+        "android_client_info": {
+          "package_name": "com.omar.chats"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "728840360531-426uip031ls20nefsfmd302no2p44bkr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeVofuPoaIJABsyjubT06Zq20_9si2y48"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "728840360531-426uip031ls20nefsfmd302no2p44bkr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
