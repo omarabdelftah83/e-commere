@@ -20,17 +20,18 @@ class _HomeState extends State<Home> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Container(
+            height: 300,
             child: Image.asset(
-                'assets/images/mail-message-sunny-day-logo-vector-4097750.webp'),
+                'assets/images/istockphoto-1300338138-612x612y.jpg'),
           ),
           const SizedBox(
             height: 10,
           ),
-          MyButton(color: Colors.orangeAccent, title: 'sing in', onPressed: (){
+          MyButton(color: Colors.purpleAccent, title: 'sing in', onPressed: (){
             Navigator.pushReplacementNamed(context, Routes.signInScreen);
           }),
           const SizedBox(height: 20,),
-          MyButton(color: Colors.blue, title: 'register', onPressed: (){
+          MyButton(color: Colors.blueAccent, title: 'register', onPressed: (){
             Navigator.pushReplacementNamed(context, Routes.registrationScreen);
 
           })
