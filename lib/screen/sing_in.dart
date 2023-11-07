@@ -1,4 +1,7 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 import '../pressention/routes.dart';
@@ -16,7 +19,7 @@ class _SignInScreenState extends State<SignInScreen> {
   final _auth = FirebaseAuth.instance;
   late String email;
   late String pass;
-  bool showSpinner =false;
+  bool showSpinner = false;
 
   @override
   Widget build(BuildContext context) {
@@ -32,14 +35,15 @@ class _SignInScreenState extends State<SignInScreen> {
             children: [
               Container(
                 height: 250,
-                child: Image.asset('assets/images/istockphoto-1300338138-612x612y.jpg'),
+                child: Image.asset(
+                    'assets/images/istockphoto-1300338138-612x612y.jpg'),
               ),
               SizedBox(height: 50),
               TextField(
                 keyboardType: TextInputType.emailAddress,
                 textAlign: TextAlign.center,
                 onChanged: (value) {
-                  email=value;
+                  email = value;
                 },
                 decoration: const InputDecoration(
                   hintText: 'Enter your Email',
@@ -76,7 +80,7 @@ class _SignInScreenState extends State<SignInScreen> {
               TextField(
                 textAlign: TextAlign.center,
                 onChanged: (value) {
-                  pass=value;
+                  pass = value;
                 },
                 decoration: const InputDecoration(
                   hintText: 'Enter your password',
@@ -113,24 +117,34 @@ class _SignInScreenState extends State<SignInScreen> {
               MyButton(
                 color: Colors.purpleAccent,
                 title: 'Sign in',
-                onPressed: ()async {
+                onPressed: () async {
                   setState(() {
-                    showSpinner=true;
+                    showSpinner = true;
                   });
-                  try{
-                    final user = await _auth.createUserWithEmailAndPassword(
-                        email: email, password: pass);
-                    if(user!=null){
-                      Navigator.pushNamed(context, Routes.chatScreen);
-                      setState(() {
-                        showSpinner=false;
-                      });
 
+                  try {
+                    final user = await _auth.signInWithEmailAndPassword(
+                        email: email, password: pass);
+                    if (user != null) {
+                      Navigator.pushNamed(context, Routes.HomeScreen);
+                      setState(() {
+                        showSpinner = false;
+                      });
                     }
-                    //Navigator.pushNamed(context, Routes.chatScreen);
-                  }catch(e){
-                    print(e);
-                  }
+                 //   Navigator.pushNamed(context, Routes.HomeBody);
+                  } catch (e) {
+                    setState(() {
+                      showSpinner = false;
+                    });
+                    Fluttertoast.showToast(
+
+                        msg: "please register in the application",
+                        toastLength: Toast.LENGTH_SHORT,
+                        gravity: ToastGravity.TOP,
+                        timeInSecForIosWeb: 1,
+                        backgroundColor: Colors.red,
+                        textColor: Colors.white,
+                        fontSize: 16.0);                  }
                 },
               )
             ],
