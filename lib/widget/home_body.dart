@@ -2,7 +2,7 @@ import 'package:chats/widget/product_cart.dart';
 import 'package:flutter/material.dart';
 import '../app/constant.dart';
 import '../model/entity.dart';
-import '../screen/dateils_screen.dart';
+import '../pressention/screen/dateils_screen.dart';
 class HomeBody extends StatelessWidget {
   const HomeBody({super.key});
 

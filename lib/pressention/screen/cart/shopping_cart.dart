@@ -1,11 +1,12 @@
-import 'package:chats/pressention/control.dart';
-import 'package:chats/screen/cart/dateils_screen_cart.dart';
+import 'package:chats/app/control.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../model/entity.dart';
-import '../../widget/product_cart.dart';
+
+import '../../../model/entity.dart';
+import '../../../widget/product_cart.dart';
 import '../dateils_screen.dart';
+import 'dateils_screen_cart.dart';
 
 class ShoppingCart extends StatelessWidget {
   ShoppingCart({super.key});

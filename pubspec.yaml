@@ -43,6 +43,10 @@ dependencies:
   image_picker: ^1.0.4
   get: ^4.6.6
   firebase_storage: ^11.4.1
+  shared_preferences:
+  flutter_credit_card:
+  provider:
+  font_awesome_flutter:
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -76,6 +80,18 @@ flutter:
     - assets/images/speaker.png
     - assets/images/camera(1).png
     - assets/images/images.png
+    - assets/images/istockphoto-1281150061-612x612.jpg
+    - assets/images/Login.jpg
+    - assets/images/Arrow1.svg
+    - assets/images/15549540_5623839 2.png
+    - assets/images/image 11.png
+    - assets/images/image 10.png
+    - assets/images/Dinoshapes_Book_1200x1000.png
+    - assets/images/SVGRepo_iconCarrier.png
+    - assets/images/Group.png
+    - assets/images/logo.png
+    - assets/images/SVGRepo_iconCarrier.png
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

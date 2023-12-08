@@ -1,10 +1,11 @@
 import 'package:chats/widget/product_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../app/constant.dart';
-import '../../model/entity.dart';
-import '../../pressention/control.dart';
-import '../../widget/point.dart';
+import '../../../app/constant.dart';
+import '../../../model/entity.dart';
+import '../../../widget/point.dart';
+import '../../../app/control.dart';
+
 
 class DetailsBodyCart extends StatelessWidget {
   DetailsBodyCart({required this.product, super.key});

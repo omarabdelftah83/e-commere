@@ -1,7 +1,5 @@
-import 'package:chats/pressention/control.dart';
-import 'package:chats/pressention/routes.dart';
-import 'package:chats/screen/home2_screen.dart';
-
+import 'package:chats/app/control.dart';
+import 'package:chats/app/routes.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -22,7 +20,7 @@ class MyApp extends StatelessWidget {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
       onGenerateRoute: RouteGenarator.getRoute,
-     initialRoute: _auth.currentUser !=null ? Routes.HomeScreen : Routes.ComparePage,
+      initialRoute: _auth.currentUser !=null ? Routes.HomeScreen : Routes.ComparePage,
      // initialRoute:Routes.ComparePage,
       title: 'Flutter Demo',
 

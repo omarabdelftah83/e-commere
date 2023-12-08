@@ -1,9 +1,9 @@
-import 'package:chats/screen/cart/dateils_body_cart.dart';
+import 'package:chats/pressention/screen/cart/dateils_body_cart.dart';
 import 'package:flutter/material.dart';
 
-import '../../app/constant.dart';
-import '../../model/entity.dart';
-import '../../widget/dateils_body.dart';
+import '../../../app/constant.dart';
+import '../../../model/entity.dart';
+
 
 class DatilesScreenCart extends StatelessWidget {
   const DatilesScreenCart({required this.product, super.key});

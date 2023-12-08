@@ -1,9 +1,10 @@
-import 'package:chats/screen/cart/dateils_screen_cart.dart';
 import 'package:chats/widget/product_cart.dart';
 import 'package:flutter/material.dart';
-import '../../app/constant.dart';
-import '../../model/entity.dart';
+import '../../../app/constant.dart';
+import '../../../model/entity.dart';
+
 import '../dateils_screen.dart';
+import 'dateils_screen_cart.dart';
 class HomeBodyCart extends StatelessWidget {
   const HomeBodyCart({super.key});
 

@@ -24,6 +24,7 @@ List<Product> products = [
   ),
   Product(
     id: 2,
+
     price: 1099,
     title: "جهاز موبايل",
     subTitle: "وأصبح للموبايل قوة",

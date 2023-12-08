@@ -1,10 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../pressention/control.dart';
-import '../pressention/routes.dart';
-import '../widget/home_body.dart';
+import '../../widget/home_body.dart';
+import '../../app/control.dart';
+import '../../app/routes.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key ,});
@@ -19,7 +18,6 @@ HomeScreenController controller = Get.find();
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
- //  final newUser = ModalRoute.of(context)!.settings.arguments as User;
     return Scaffold(
       drawer: Drawer(child: ListView(
         padding: EdgeInsets.zero,
@@ -27,9 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
             const UserAccountsDrawerHeader(
             accountName: Text(''),
             accountEmail: Text("john.doe@example.com"),
-            // currentAccountPicture: CircleAvatar(
-            //   backgroundImage: AssetImage(''),
-            // ),
+
           ),
           ListTile(
             leading: const Icon(Icons.home),
@@ -65,47 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: const HomeBody(),
     );
   }
-  // Widget drawer(BuildContext context) {
-  //   return ListView(
-  //     padding: EdgeInsets.zero,
-  //     children: <Widget>[
-  //       const UserAccountsDrawerHeader(
-  //         accountName: Text(''),
-  //         accountEmail: Text("john.doe@example.com"),
-  //         // currentAccountPicture: CircleAvatar(
-  //         //   backgroundImage: AssetImage(''),
-  //         // ),
-  //       ),
-  //       ListTile(
-  //         leading: const Icon(Icons.home),
-  //         title: const Text('Home'),
-  //         onTap: () {
-  //           // Handle home screen navigation
-  //         },
-  //       ),
-  //       ListTile(
-  //         leading: const Icon(Icons.settings),
-  //         title: const Text('Settings'),
-  //         onTap: () {
-  //           // Handle settings navigation
-  //         },
-  //       ),
-  //       const Divider(),
-  //       ListTile(
-  //         leading:  Icon(Icons.exit_to_app),
-  //         title: const Text('Logout'),
-  //         onTap: () async {
-  //           try {
-  //             await _auth.signOut(); // سجل الخروج من Firebase
-  //             Navigator.pop(context); //
-  //           } catch (e) {
-  //             print('$e');
-  //           }
-  //         },
-  //       ),
-  //     ],
-  //   );
-  // }
+
   AppBar homeAppar(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.purple,
@@ -121,7 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 IconButton(
                     onPressed: () {
-                      Navigator.pushReplacementNamed(
+                      Navigator.pushNamed(
                           context, Routes.shoppingCart);
                     },
                     icon: const Icon(
