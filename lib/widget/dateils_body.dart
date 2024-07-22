@@ -72,7 +72,7 @@ class _DetailsBodyState extends State<DetailsBody> {
                     padding: const EdgeInsets.all(15.0),
                     child: Text(
                       widget.product.title,
-                      style: Theme.of(context).textTheme.headline6,
+                   //   style: Theme.of(context).textTheme.headline6,
                     ),
                   ),
                   Row(
@@ -103,7 +103,7 @@ class _DetailsBodyState extends State<DetailsBody> {
                         icon: Icon(Icons.shopping_cart),
                         label: Text('add'),
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.blue,
+                          backgroundColor: Colors.blue,
                         ),
                       ),
                       SizedBox(width: 20),
@@ -117,7 +117,7 @@ class _DetailsBodyState extends State<DetailsBody> {
 
                         label: Text('pyment'),
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.pinkAccent,
+                          backgroundColor: Colors.pinkAccent,
                         ),
                       ),
                     ],
@@ -172,7 +172,7 @@ class _DetailsBodyState extends State<DetailsBody> {
                         icon: Icon(Icons.delete),
                         label: Text('حذف'),
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.pinkAccent,
+                          backgroundColor: Colors.pinkAccent,
                         ),
                       ),
                     ),
@@ -250,7 +250,7 @@ class _DetailsBodyState extends State<DetailsBody> {
                   },
                   child: Text('save'),
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.black38,
+                    backgroundColor: Colors.black38,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0), // تحديد نصف قطر الدائرة
                       side: BorderSide(color: Colors.grey), // اختيار لون الحدود

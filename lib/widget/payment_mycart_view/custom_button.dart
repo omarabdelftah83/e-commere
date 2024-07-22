@@ -25,11 +25,7 @@ class CustomButton extends StatelessWidget {
       child: ElevatedButton(
           onPressed: onPressed,
           style: ElevatedButton.styleFrom(
-            primary: backgroundColor1,
-            // لون الخلفية للزر
-            onPrimary: backgroundColor2,
-            // لون النص على الزر
-            onSurface: textColor,
+            foregroundColor: backgroundColor2, backgroundColor: backgroundColor1, disabledForegroundColor: textColor.withOpacity(0.38), disabledBackgroundColor: textColor.withOpacity(0.12),
             // لون النص عند تمرير الماوس أو اللمس بالزر
             padding: const EdgeInsets.all(16),
             // هوامش داخلية للزر
