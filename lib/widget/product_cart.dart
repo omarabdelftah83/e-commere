@@ -71,7 +71,7 @@ class ProductCart extends StatelessWidget {
                           horizontal: kDefaultPadding),
                       child: Text(
                         product.subTitle,
-                        style: Theme.of(context).textTheme.caption,
+                     //   style: Theme.of(context).textTheme.caption,
                       ),
                     ),
                     Spacer(),

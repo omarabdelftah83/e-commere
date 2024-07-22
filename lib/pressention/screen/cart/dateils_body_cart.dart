@@ -60,7 +60,7 @@ class DetailsBodyCart extends StatelessWidget {
                     padding: const EdgeInsets.all(15.0),
                     child: Text(
                       product.title,
-                      style: Theme.of(context).textTheme.headline6,
+                    //  style: Theme.of(context).textTheme.headline6,
                     ),
                   ),
                   Row(

@@ -37,7 +37,6 @@ AppBar detailsAppBar(BuildContext context) {
     centerTitle: false,
     title: Text(
       'رجوع',
-      style: Theme.of(context).textTheme.bodyText2,
     ),
   );
 }
