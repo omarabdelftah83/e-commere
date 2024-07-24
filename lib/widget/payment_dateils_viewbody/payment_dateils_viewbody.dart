@@ -60,7 +60,7 @@ class PaymentDetailsViewBody extends StatelessWidget {
                     paymentDetailsProvider.  formKey.currentState!.save();
                     } else {
                     paymentDetailsProvider.updateAutovalidateMode(AutovalidateMode.always);
-                      Navigator.pushNamed(context, Routes.ThankYou);
+                      Navigator.pushNamed(context, Routes.thankYou);
                     }
                   }),
             ),

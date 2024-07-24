@@ -48,7 +48,7 @@ class PaymentMethodsBottomSheet extends StatelessWidget {
               textColor: Colors.grey,
               title: 'Complete Payment',
               onPressed: () {
-                Navigator.pushNamed(context, Routes.PaymentDetails);
+                Navigator.pushNamed(context, Routes.paymentDetails);
               }),
         ],
       ),

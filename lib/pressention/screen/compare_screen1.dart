@@ -66,7 +66,7 @@ class ComparePage extends StatelessWidget {
                     textColor: Colors.grey,
                     title: 'Become a Seller',
                     onPressed: (){
-                      Navigator.pushNamed(context, Routes.Seller,);
+                      Navigator.pushNamed(context, Routes.seller,);
                     }),
               ],
             ),

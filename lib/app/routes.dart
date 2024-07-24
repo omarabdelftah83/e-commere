@@ -9,6 +9,7 @@ import 'package:chats/pressention/screen/register.dart';
 import 'package:chats/pressention/screen/sing_in.dart';
 
 import 'package:flutter/material.dart';
+import '../dashbord/dashbord.dart';
 import '../pressention/screen/payment/payment_details.dart';
 import '../pressention/screen/payment/thank_you.dart';
 import '../widget/home_body.dart';
@@ -16,15 +17,16 @@ class Routes {
   static const String home = '/';
   static const String signInScreen = '/SignInScreen';
   static const String registrationScreen = '/registrationScreen';
-  static const String HomeBody = '/HomeBody';
+  static const String homeBody = '/HomeBody';
   static const String chat = '/chat';
-  static const String HomeScreen = '/HomeScreen';
+  static const String homeScreen = '/HomeScreen';
   static const String shoppingCart = '/shoppingCart';
-  static const String ComparePage = '/ComparePage';
-  static const String Seller = '/Seller';
-  static const String MyCartView = '/MyCartView';
-  static const String PaymentDetails = '/PaymentDetails';
-  static const String ThankYou = '/ThankYou';
+  static const String comparePage = '/ComparePage';
+  static const String seller = '/Seller';
+  static const String myCartView = '/MyCartView';
+  static const String paymentDetails = '/PaymentDetails';
+  static const String thankYou = '/ThankYou';
+  static const String dashBord = '/DashBord';
 
 
 
@@ -36,29 +38,31 @@ class RouteGenarator {
   static Route<dynamic> getRoute(RouteSettings sitting) {
     switch (sitting.name) {
       case Routes.home:
-        return MaterialPageRoute(builder: (_) => Home());
+        return MaterialPageRoute(builder: (_) => const Home());
       case Routes.signInScreen:
-        return MaterialPageRoute(builder: (_) => SignInScreen());
+        return MaterialPageRoute(builder: (_) => const SignInScreen());
       case Routes.registrationScreen:
-        return MaterialPageRoute(builder: (_) => RegistrationScreen());
-      case Routes.HomeBody:
-        return MaterialPageRoute(builder: (_) => HomeBody());
+        return MaterialPageRoute(builder: (_) =>const RegistrationScreen());
+      case Routes.homeBody:
+        return MaterialPageRoute(builder: (_) =>const HomeBody());
       case Routes.chat:
-        return MaterialPageRoute(builder: (_) => ChatScreen());
-      case Routes.HomeScreen:
-        return MaterialPageRoute(builder: (_) => HomeScreen());
+        return MaterialPageRoute(builder: (_) => const ChatScreen());
+      case Routes.homeScreen:
+        return MaterialPageRoute(builder: (_) => const HomeScreen());
       case Routes.shoppingCart:
         return MaterialPageRoute(builder: (_) => ShoppingCart());
-      case Routes.ComparePage:
+      case Routes.comparePage:
         return MaterialPageRoute(builder: (_) => ComparePage());
-      case Routes.Seller:
+      case Routes.seller:
         return MaterialPageRoute(builder: (_) => Seller());
-      case Routes.MyCartView:
-        return MaterialPageRoute(builder: (_) => MyCartView());
-      case Routes.PaymentDetails:
-        return MaterialPageRoute(builder: (_) => PaymentDetails());
-      case Routes.ThankYou:
-        return MaterialPageRoute(builder: (_) => ThankYou());
+      case Routes.myCartView:
+        return MaterialPageRoute(builder: (_) => const  MyCartView());
+      case Routes.paymentDetails:
+        return MaterialPageRoute(builder: (_) => const  PaymentDetails());
+      case Routes.thankYou:
+        return MaterialPageRoute(builder: (_) => const ThankYou());
+      case Routes.dashBord:
+        return MaterialPageRoute(builder: (_) => const DashBord());
 
 
 
@@ -70,7 +74,7 @@ class RouteGenarator {
     return MaterialPageRoute(
         builder: (_) => Scaffold(
           appBar: AppBar(
-            title: Text('noRouteFound'),
+            title:const Text('noRouteFound'),
           ),
         ));
   }}

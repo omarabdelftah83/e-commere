@@ -110,7 +110,7 @@ class _DetailsBodyState extends State<DetailsBody> {
                       //payment button..///
                       ElevatedButton.icon(
                         onPressed: () {
-                          Navigator.pushNamed(context, Routes.MyCartView);
+                          Navigator.pushNamed(context, Routes.myCartView);
 
                         },
                         icon: Icon(Icons.payment),

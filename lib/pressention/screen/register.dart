@@ -179,7 +179,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       );
                       await FireStoreUser().addUserToFireStore(userModel);
 
-                      Navigator.pushNamed(context, Routes.HomeScreen, arguments: newUser);
+                      Navigator.pushNamed(context, Routes.homeScreen, arguments: newUser);
                     } on FirebaseAuthException catch (e) {
                       if (e.code == 'email-already-in-use') {
                         print('The email address is already in use by another account.');

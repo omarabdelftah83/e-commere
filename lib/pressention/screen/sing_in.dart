@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
@@ -7,8 +5,6 @@ import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import '../../widget/button.dart';
 import '../../app/routes.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-
-import 'home_screen2.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -26,9 +22,7 @@ class _SignInScreenState extends State<SignInScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-
-      ),
+      appBar: AppBar(),
       backgroundColor: Colors.white,
       body: ModalProgressHUD(
         inAsyncCall: showSpinner,
@@ -119,11 +113,14 @@ class _SignInScreenState extends State<SignInScreen> {
                   ),
                 ),
                 SizedBox(height: 10),
+
                 ///sing button...///
                 MyButton(
                   color: Colors.blueGrey,
                   title: 'Sign in',
                   onPressed: () async {
+                    Navigator.pushNamed(context, Routes.homeScreen);
+
                     setState(() {
                       showSpinner = true;
                     });
@@ -132,12 +129,12 @@ class _SignInScreenState extends State<SignInScreen> {
                       final user = await _auth.signInWithEmailAndPassword(
                           email: email, password: pass);
                       if (user != null) {
-                        Navigator.pushNamed(context, Routes.HomeScreen);
+                        Navigator.pushNamed(context, Routes.homeScreen);
                         setState(() {
                           showSpinner = false;
                         });
                       }
-                      //   Navigator.pushNamed(context, Routes.HomeBody);
+                      // Navigator.pushNamed(context, Routes.HomeBody);
                     } catch (e) {
                       setState(() {
                         showSpinner = false;

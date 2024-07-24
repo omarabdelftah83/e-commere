@@ -41,8 +41,8 @@ class _MyAppState extends State<MyApp> {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         onGenerateRoute: RouteGenarator.getRoute,
-        initialRoute: _auth.currentUser != null ? Routes.HomeScreen :  Routes.ComparePage,
-        title: 'Flutter Demo',
+        //دي بتعمل اي؟ currentUser 
+        initialRoute: _auth.currentUser != null ? Routes.dashBord :  Routes.dashBord,
       ),
     );
   }
