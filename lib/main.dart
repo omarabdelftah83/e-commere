@@ -1,18 +1,17 @@
 
 
+import 'package:chats/app/control.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:provider/provider.dart';
-import 'app/control.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'app/routes.dart';
-import 'controller/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  Get.put(HomeScreenController());
+  //Get.put(HomeScreenController());
   runApp(MyApp());
 }
 
@@ -33,17 +32,11 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => PaymentDetailsProvider()),
-        ChangeNotifierProvider(create: (_) => CreditCardProvider()),
-      ],
-      child: MaterialApp(
+    return  MaterialApp(
         debugShowCheckedModeBanner: false,
         onGenerateRoute: RouteGenarator.getRoute,
-        initialRoute: _auth.currentUser != null ? Routes.HomeScreen :  Routes.ComparePage,
+        initialRoute: _auth.currentUser != null ? Routes.homePage :  Routes.signInScreen,
         title: 'Flutter Demo',
-      ),
     );
   }
 }

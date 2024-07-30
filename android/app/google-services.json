@@ -14,7 +14,15 @@
       },
       "oauth_client": [
         {
-          "client_id": "728840360531-426uip031ls20nefsfmd302no2p44bkr.apps.googleusercontent.com",
+          "client_id": "728840360531-ttc712ueivfm3c88mo1nvdnd6mkl59b5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.omar.chats",
+            "certificate_hash": "500e701df8fce3244ee1b223d1513cbb078d476c"
+          }
+        },
+        {
+          "client_id": "728840360531-pu7f8fkhek8kf8pr6on2dlsl7k6le7rk.apps.googleusercontent.com",
           "client_type": 3
         }
       ],

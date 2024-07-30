@@ -10,30 +10,30 @@ class FireStoreUser {
 
 class UserModel {
   String? userId;
+  String? firstName;
+  String? secondName;
+
   String? email;
-  String? name;
-  String? pic;
   String? phone;
 
-  UserModel({this.userId, this.email, this.name, this.pic, this.phone});
+
+  UserModel({this.userId,this.firstName,this.secondName, this.email, this.phone,});
 
   UserModel.fromJson(Map<dynamic, dynamic> map) {
-    if (map == null) {
-      return;
-    }
     userId = map['userId'];
+    firstName=map['firstName'];
+    secondName=map ['secondName'];
     email = map['email'];
-    name = map['name'];
-    pic = map['pic'];
     phone = map['phone'];
   }
 
   Map<String, dynamic> toJson() {
+    //convert data to json //
     return {
       'userId': userId,
+      'firstName':firstName,
+      'secondName':secondName,
       'email': email,
-      'name': name,
-      'pic': pic,
       'phone': phone,
     };
   }
